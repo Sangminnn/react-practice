@@ -12,6 +12,7 @@ github을 돌아다니던 중, [https://github.com/addisonglobal/frontend-techni
 
 view에 관련된 내용은 component, logic이 들어간 내용은 container 폴더에 나누어 정리하였다.
 
+
 ### 사용한 기술
 
 - react ( hooks)
@@ -21,6 +22,7 @@ view에 관련된 내용은 component, logic이 들어간 내용은 container �
 - redux-saga
 - axios
 - styled-components
+
 
 ### Project 구조
 
@@ -32,6 +34,7 @@ view에 관련된 내용은 component, logic이 들어간 내용은 container �
     - MainComponent
         - ListItems
             - ListItem → Buttons → Button , 이후 내용들은 component로 이루어져있음
+
 
 ### 하면서 부족하다고 느낀 점
 
