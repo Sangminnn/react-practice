@@ -1,4 +1,4 @@
-## React-Prac Project
+# React-Prac Project
 
 ### TMI
 
