@@ -8,7 +8,7 @@ github을 돌아다니던 중, [https://github.com/addisonglobal/frontend-techni
 
 평소에는 class형 component를 활용하여 react component를 만들어 왔는데,
 
-공부하다보니 react hooks 의 형태도 알아두면 좋을것같은 생각에 이번에 만드는건 hooks 를 사용하여 만들게 되었다.
+공부하다보니 react hooks 의 형태도 알아두면 좋을것같은 생각에 이번에 만드는건 function component, hooks 를 사용하여 만들게 되었다.
 
 view에 관련된 내용은 component, logic이 들어간 내용은 container 폴더에 나누어 정리하였다.
 
