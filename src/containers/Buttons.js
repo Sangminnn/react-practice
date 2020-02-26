@@ -8,6 +8,7 @@ function Buttons(props) {
   
   const removeItem = useSelector(state => state.listing.removeItem);
 
+  // 이 부분을 어떻게 대체해야할지 감이 안잡힘
   const itemList = props.selections.map(i => items.push({...i, active: false}));
 
   const [selections, setSelections] = useState(items)
@@ -24,7 +25,6 @@ function Buttons(props) {
         ...selected,
         active: !selected.active
       }
-      // 이부분에 체크된 애만 업데이트 해주는 로직을 넣고 그걸 activeChange로 넣으면 될듯
 
       if(next[index].active) {
         props.activeChange({

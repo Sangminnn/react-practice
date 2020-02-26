@@ -11,10 +11,6 @@ function MainContainer() {
   const [listToggle, setListToggle] = useState(false);
   const activeList = useSelector(state => state.listing.activeList);
 
-  // useEffect(() => {
-  //   console.log(listToggle);
-  // }, [listToggle])
-
   useEffect(() => {
     dispatch(listActions.getStart());
   }, []);
@@ -24,13 +20,6 @@ function MainContainer() {
   const menu = activeList.map(
     item => (<MenuItem eid={item.eid} list={item.list} /> )
   )
-
-  // const changedMarket = [...nextList, item].sort((a, b) => +a.id[a.id.length-1] - (+b.id[b.id.length-1]))
-
-  // useEffect(() => {
-  //   console.log(event);
-  // }, [event])
-
   return (
     <>
       <Header onToggle={onToggle}>

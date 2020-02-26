@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;  
 
-  width: 100%;
   height: 80px;
 
   padding: 1.5rem 1rem;
@@ -23,7 +22,7 @@ const List = styled.div`
   cursor: pointer;
   border: 1px solid black;
   padding: 0.5rem 0.3rem;
-`
+`;
 
 const Header = ({ children, onToggle }) => (
   <Wrapper>

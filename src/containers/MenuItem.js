@@ -7,14 +7,12 @@ function MenuItem(props) {
   const dispatch = useDispatch();
   
   const onRemove = (id) => {
-    console.log(id, props.eid);
-    dispatch(listActions.removeItem({id: id, eid: props.eid}));
+    console.log(id);
+    dispatch(listActions.removeItem(id));
   }
 
   const menuItems = props.list.map(
     market => 
-      // const splitedTitle = market.mname.split(' ').shift();
-      // const customTitle = splitedTitle.join(' ');
       (<MenuItemComponent 
         id={market.id}
         title={market.mname} 
@@ -22,7 +20,6 @@ function MenuItem(props) {
         price={market.price} 
         onRemove={onRemove}
       />)
-    
   );
 
   return (

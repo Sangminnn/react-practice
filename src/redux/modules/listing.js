@@ -61,10 +61,9 @@ export default handleActions({
       draft.activeList = action.payload;
     }),
   [REMOVE_ITEM]: (state, action) => {
-    const { id, eid } = action.payload;
     return produce(state, draft => {
-      console.log(id);
-      draft.removeItem = id;
+      // console.log(id);
+      draft.removeItem = action.payload;
     })
   }
 }, initialState);
