@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { ButtonComponent } from '../components';
 
@@ -9,7 +9,17 @@ function Buttons(props) {
   const removeItem = useSelector(state => state.listing.removeItem);
 
   // 이 부분을 어떻게 대체해야할지 감이 안잡힘
-  const itemList = props.selections.map(i => items.push({...i, active: false}));
+  // const itemList = props.selections.map(i => items.push({...i, active: false}));
+
+  useMemo(() => {
+    props.selections.forEach(i => items.push({...i, active: false}));
+  })
+
+  // const activeItemList = (list) => {
+  //   list.map(i => items.push({...i, active: false}));
+  // }
+
+  // const itemList = useMemo(() => activeItemList(props.selections), [props.selections])
 
   const [selections, setSelections] = useState(items)
 
@@ -34,12 +44,7 @@ function Buttons(props) {
         })
       } else {
         props.activeChange(next[index].id)
-      } 
-
-      console.log('next');
-      console.log(items);
-      console.log(next);
-
+      }
       return setSelections(next);
     }
 

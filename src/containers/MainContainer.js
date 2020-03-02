@@ -13,7 +13,7 @@ function MainContainer() {
 
   useEffect(() => {
     dispatch(listActions.getStart());
-  }, []);
+  }, [dispatch]);
  
   const onToggle = () => setListToggle(!listToggle);
 
