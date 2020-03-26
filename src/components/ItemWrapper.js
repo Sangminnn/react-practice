@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   text-align: center;
   padding: 2rem 1rem;
   

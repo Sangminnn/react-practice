@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import * as listActions from '../redux/modules/listing';
+import * as listActions from '../redux/modules/actions';
 import { MenuItemComponent, MenuItemWrapper } from '../components';
 
 function MenuItem(props) {

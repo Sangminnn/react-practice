@@ -6,22 +6,13 @@ function Buttons(props) {
   
   const items = [];
   
-  const removeItem = useSelector(state => state.listing.removeItem);
-
-  // 이 부분을 어떻게 대체해야할지 감이 안잡힘
-  // const itemList = props.selections.map(i => items.push({...i, active: false}));
-
   useMemo(() => {
     props.selections.forEach(i => items.push({...i, active: false}));
-  })
+  }, [items]);
 
-  // const activeItemList = (list) => {
-  //   list.map(i => items.push({...i, active: false}));
-  // }
+  const [selections, setSelections] = useState(items);
 
-  // const itemList = useMemo(() => activeItemList(props.selections), [props.selections])
-
-  const [selections, setSelections] = useState(items)
+  const removeItem = useSelector(state => state.listReducer.removeItem);
 
   const onToggle = (id) => {
     console.log('변경되었습니다.', id);
@@ -41,9 +32,9 @@ function Buttons(props) {
           ...next[index],
           mid: props.mid,
           mname: props.mname
-        })
+        });
       } else {
-        props.activeChange(next[index].id)
+        props.activeChange(next[index].id);
       }
       return setSelections(next);
     }

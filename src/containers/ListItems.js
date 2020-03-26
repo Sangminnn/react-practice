@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ListItem from './ListItem';
-import * as listActions from '../redux/modules/listing';
+import * as listActions from '../redux/modules/actions';
 import { ItemWrapper } from '../components'
 
 function ListItems() {
   const dispatch = useDispatch();
-  const event = useSelector(state => state.listing.event);
+  const event = useSelector(state => state.listReducer.event);
   
   const [lastList, setLastList] = useState([]);
   

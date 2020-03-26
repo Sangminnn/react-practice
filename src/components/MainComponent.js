@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Positioner = styled.div`
+const Positioner = styled.section`
   display: flex;
   justify-content: center;
 
@@ -9,7 +9,7 @@ const Positioner = styled.div`
   height: 1200px;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
 
 `;
 

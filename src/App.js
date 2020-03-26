@@ -3,9 +3,7 @@ import { MainContainer } from './containers';
 
 const App = () => {
   return (
-    <>
-      <MainContainer />
-    </>
+    <MainContainer />
   )
 };
 

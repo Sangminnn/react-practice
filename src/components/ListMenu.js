@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Positioner = styled.div`
+const Positioner = styled.aside`
   height: 100%;
   width: ${props => props.active ? '400px' : '0px'};
   position: fixed;

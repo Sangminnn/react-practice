@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Header, MainComponent, ListMenu, MenuItems } from '../components';
 import ListItems from './ListItems';
 import MenuItem from './MenuItem';
-import * as listActions from '../redux/modules/listing';
+import * as listActions from '../redux/modules/actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 function MainContainer() {
   const dispatch = useDispatch();
 
   const [listToggle, setListToggle] = useState(false);
-  const activeList = useSelector(state => state.listing.activeList);
+  const activeList = useSelector(state => state.listReducer.activeList);
 
   useEffect(() => {
     dispatch(listActions.getStart());
@@ -19,7 +19,8 @@ function MainContainer() {
 
   const menu = activeList.map(
     item => (<MenuItem eid={item.eid} list={item.list} /> )
-  )
+  );
+
   return (
     <>
       <Header onToggle={onToggle}>
@@ -38,12 +39,3 @@ function MainContainer() {
 };
 
 export default MainContainer;
-
-// export default connect(
-//   (state) => ({
-//     event: state.listing.event
-//   }),
-//   (dispatch) => ({
-//     ListActions: bindActionCreators(listActions, dispatch)
-//   })
-// )(MainContainer);

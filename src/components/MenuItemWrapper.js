@@ -9,8 +9,6 @@ const Wrapper = styled.div`
     border-top: 1px solid black;  
   }
 `
-  
-
 
 const MenuItemWrapper = ({ children }) => (
   <Wrapper>
