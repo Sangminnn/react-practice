@@ -1,4 +1,4 @@
-# React-Prac Project
+# Addison-React-Tech-Test Project
 
 ### TMI
 
