@@ -57,8 +57,12 @@ react hooks 에 대해 한번 더 훑어보던 중,
 
 - **after**
 
-`useMemo(() => {`
+```js
+useMemo(() => {
 
-`props.selections.forEach(i => items.push({...i, active: false}));`
+props.selections.forEach(i => items.push({...i, active: false}));
 
-`});`
+});
+
+```
+
