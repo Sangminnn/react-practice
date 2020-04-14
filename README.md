@@ -53,7 +53,7 @@ react hooks 에 대해 한번 더 훑어보던 중,
 
 - **before**
 
-```
+```js
 const itemList = props.selections.map(i => items.push({...i, active: false}));
 ```
 
